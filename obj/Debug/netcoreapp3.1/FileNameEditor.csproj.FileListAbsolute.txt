@@ -1,0 +1,12 @@
+C:\Users\Administrator\source\repos\FileNameEditor\bin\Debug\netcoreapp3.1\FileNameEditor.exe
+C:\Users\Administrator\source\repos\FileNameEditor\bin\Debug\netcoreapp3.1\FileNameEditor.deps.json
+C:\Users\Administrator\source\repos\FileNameEditor\bin\Debug\netcoreapp3.1\FileNameEditor.runtimeconfig.json
+C:\Users\Administrator\source\repos\FileNameEditor\bin\Debug\netcoreapp3.1\FileNameEditor.runtimeconfig.dev.json
+C:\Users\Administrator\source\repos\FileNameEditor\bin\Debug\netcoreapp3.1\FileNameEditor.dll
+C:\Users\Administrator\source\repos\FileNameEditor\bin\Debug\netcoreapp3.1\FileNameEditor.pdb
+C:\Users\Administrator\source\repos\FileNameEditor\obj\Debug\netcoreapp3.1\FileNameEditor.AssemblyInfoInputs.cache
+C:\Users\Administrator\source\repos\FileNameEditor\obj\Debug\netcoreapp3.1\FileNameEditor.AssemblyInfo.cs
+C:\Users\Administrator\source\repos\FileNameEditor\obj\Debug\netcoreapp3.1\FileNameEditor.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\FileNameEditor\obj\Debug\netcoreapp3.1\FileNameEditor.dll
+C:\Users\Administrator\source\repos\FileNameEditor\obj\Debug\netcoreapp3.1\FileNameEditor.pdb
+C:\Users\Administrator\source\repos\FileNameEditor\obj\Debug\netcoreapp3.1\FileNameEditor.genruntimeconfig.cache
