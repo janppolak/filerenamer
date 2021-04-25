@@ -10,3 +10,4 @@ C:\Users\Administrator\source\repos\FileNameEditor\obj\Debug\netcoreapp3.1\FileN
 C:\Users\Administrator\source\repos\FileNameEditor\obj\Debug\netcoreapp3.1\FileNameEditor.dll
 C:\Users\Administrator\source\repos\FileNameEditor\obj\Debug\netcoreapp3.1\FileNameEditor.pdb
 C:\Users\Administrator\source\repos\FileNameEditor\obj\Debug\netcoreapp3.1\FileNameEditor.genruntimeconfig.cache
+C:\Users\Administrator\source\repos\FileNameEditor\obj\Debug\netcoreapp3.1\FileNameEditor.csprojAssemblyReference.cache
