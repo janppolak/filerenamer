@@ -6,7 +6,7 @@ namespace FileNameEditor
     {
         static void Main(string[] args)
         {
-            DirectoryContentInfo directory = new DirectoryContentInfo();
+            var directory = new FileRenamer();
             directory.ShowDirectoryContent();
         }
     }
