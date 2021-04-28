@@ -1,18 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Text;
 
 namespace FileNameEditor
 {
     class FileRenamer
     {
-        private const string _path = @"c:\users\janpp\desktop\renamealbum";
-        //string _path = Directory.GetCurrentDirectory();
+        private readonly string _directoryPath;
 
-        public void ShowDirectoryContent()
+        public FileRenamer(string directoryPath)
         {
-            var fileEntries = Directory.GetFiles(_path);
+            _directoryPath = directoryPath;
+        }
+
+        public List<FileDto> GetFileDtosFromDirectory()
+        {
+            var fileEntries = Directory.GetFiles(_directoryPath);
 
             var fileDtos = new List<FileDto>();
 
@@ -30,6 +35,33 @@ namespace FileNameEditor
 
                 fileDtos.Add(fileDto);
             }
+            return fileDtos;
+        }
+
+        internal void RenameFiles(List<FileDto> fileDtos)
+        {
+            var sortedFileDtos = fileDtos.OrderBy(dto => dto.FileCreatedDate).ToList();
+            for (int i = 0; i < sortedFileDtos.Count; i++)
+            {
+                RenameFile(i + 1, sortedFileDtos[i]);
+            }
+        }
+
+        private void RenameFile(int id, FileDto fileDto)
+        {
+            var newFileName = GetNewFileName(id, fileDto);
+            var oldFileNameWithPath = Path.Combine(_directoryPath, fileDto.FileName);
+            var extension = Path.GetExtension(oldFileNameWithPath);
+            var newFileNameWithPath = Path.Combine(_directoryPath, newFileName + extension);
+
+            Console.WriteLine("Renaming: " + oldFileNameWithPath + " => " + newFileNameWithPath);
+            File.Move(oldFileNameWithPath, newFileNameWithPath);
+        }
+
+        private string GetNewFileName(int id, FileDto fileDto)
+        {
+            var dateString = fileDto.FileCreatedDate.ToString("G").Replace(':', '.');
+            return $"{id} - {dateString}";
         }
     }
 }

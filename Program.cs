@@ -6,8 +6,12 @@ namespace FileNameEditor
     {
         static void Main(string[] args)
         {
-            var directory = new FileRenamer();
-            directory.ShowDirectoryContent();
+            const string path = @"c:\users\janpp\desktop\renamealbum";
+            //string path = Directory.GetCurrentDirectory();
+
+            var fileRenamer = new FileRenamer(path);
+            var fileDtos = fileRenamer.GetFileDtosFromDirectory();
+            fileRenamer.RenameFiles(fileDtos);
         }
     }
 }
