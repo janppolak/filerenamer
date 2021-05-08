@@ -47,6 +47,7 @@ namespace FileNameEditor
             }
         }
 
+
         private void RenameFile(int id, FileDto fileDto)
         {
             var newFileName = GetNewFileName(id, fileDto);
