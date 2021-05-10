@@ -8,23 +8,23 @@ namespace FileNameEditor
 {
     class Sorter
     {
-        public string _path = @"c:\users\janpp\desktop\żółw";
+        private string _path = @"c:\users\janpp\desktop\żółw";
 
         public List<FileDto> GetFileDtos()
         {
             var fileEntries = Directory.GetFiles(_path);
             var fileDtoss = new List<FileDto>();
-            
+
 
             foreach (var item in fileEntries)
             {
                 var fileName = Path.GetFileName(item);
 
-                var FileDto = new FileDto()
+                var fileDto = new FileDto()
                 {
                     FileName = fileName
                 };
-                fileDtoss.Add(FileDto);
+                fileDtoss.Add(fileDto);
             }
             return fileDtoss;
         }
@@ -32,9 +32,13 @@ namespace FileNameEditor
         {
             var sortedList = fileDtoss.OrderBy(x => x.FileName).ToList();
 
-            foreach (var item in sortedList)
+            for (int i = 0; i < sortedList.Count; i++)
             {
-                Console.WriteLine(item.FileName);
+                foreach (var item in sortedList)
+                {
+                    Console.WriteLine(i + item.FileName);
+                }
+                
             }
         }
     }
